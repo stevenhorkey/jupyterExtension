@@ -1,0 +1,42 @@
+{
+  "name": "jupyterlab_xkcd_py3",
+  "version": "0.1.0",
+  "description": "Show random comic in JupyterLab",
+  "keywords": [
+    "jupyter",
+    "jupyterlab",
+    "jupyterlab-extension"
+  ],
+  "homepage": "https://github.com/stevenhorkey/jupyterlab_myextension.git",
+  "bugs": {
+    "url": "https://github.com/stevenhorkey/jupyterlab_myextension.git/issues"
+  },
+  "license": "BSD-3-Clause",
+  "author": "Steven Horkey",
+  "files": [
+    "lib/**/*.{d.ts,eot,gif,html,jpg,js,js.map,json,png,svg,woff2,ttf}",
+    "style/**/*.{css,eot,gif,html,jpg,json,png,svg,woff2,ttf}"
+  ],
+  "main": "lib/index.js",
+  "types": "lib/index.d.ts",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/stevenhorkey/jupyterlab_myextension.git.git"
+  },
+  "scripts": {
+    "build": "tsc",
+    "clean": "rimraf lib",
+    "watch": "tsc -w",
+    "prepare": "npm run clean && npm run build"
+  },
+  "dependencies": {
+    "@jupyterlab/application": "^0.16.0"
+  },
+  "devDependencies": {
+    "rimraf": "^2.6.1",
+    "typescript": "~2.9.2"
+  },
+  "jupyterlab": {
+    "extension": true
+  }
+}
